@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: sf-shorter-links-postgres
+    environment:
+      - POSTGRES_USER=kisssusha
+      - POSTGRES_PASSWORD=0000
+      - POSTGRES_DB=shorter-links_db
+    ports:
+      - "5432:5432"
+    restart: always
